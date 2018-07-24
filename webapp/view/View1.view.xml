@@ -1,0 +1,16 @@
+<mvc:View controllerName="com.espedia.TestLibreriaTween.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page id="idPage" title="{i18n>title}">
+				<content>
+					<html:div id="img" style="width: 100%; height: 100%;">
+					<html:div id="target" style="position:absolute; width: 100px; height: 100px; padding: 1em;">
+						<Image src="https://exquisite-smile.com/wp-content/uploads/2018/01/whitesmile.png" width="100px" height ="100px" ></Image>
+					</html:div>
+					</html:div>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

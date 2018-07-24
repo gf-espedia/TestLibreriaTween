@@ -1,0 +1,53 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="Z_ESPEDIA_DIPENDENTI_SRV" xml:lang="it" sap:schema-version="1">
+			<EntityType Name="HeaderDipendenti" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Id" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Nome" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Nome" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Cognome" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Cognome" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="DataNascita" Type="Edm.DateTime" Nullable="false" Precision="7" sap:label="Data" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><NavigationProperty Name="header2posizione" Relationship="Z_ESPEDIA_DIPENDENTI_SRV.header2posizione" FromRole="FromRole_header2posizione"
+					ToRole="ToRole_header2posizione"/></EntityType>
+			<EntityType Name="PosizioneDipendenti" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/><PropertyRef Name="IdEvento"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Id" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="IdEvento" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Id Evento" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Evento" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Evento" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Data" Type="Edm.DateTime" Nullable="false" Precision="7" sap:label="Data" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="Bapiret2" sap:content-version="1">
+				<Key><PropertyRef Name="Type"/><PropertyRef Name="Id"/><PropertyRef Name="Number"/></Key><Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Cat. messaggio" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Classe messaggi" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Number" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Numero messaggio" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Message" Type="Edm.String" Nullable="false" MaxLength="220" sap:label="Testo mess." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="LogNo" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="N. registro" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="LogMsgNo" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="N. messaggio" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="MessageV1" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Variabile messaggio" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="MessageV2" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Variabile messaggio" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="MessageV3" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Variabile messaggio" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="MessageV4" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Variabile messaggio" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Parameter" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Nome parametro" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Row" Type="Edm.Int32" Nullable="false" sap:label="Riga parametro" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Field" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Nome campo" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="System" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sistema logico" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="SHEventi" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Id" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Evento" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Evento" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<Association Name="header2posizione" sap:content-version="1"><End Type="Z_ESPEDIA_DIPENDENTI_SRV.HeaderDipendenti" Multiplicity="1" Role="FromRole_header2posizione"/><End Type="Z_ESPEDIA_DIPENDENTI_SRV.PosizioneDipendenti" Multiplicity="*" Role="ToRole_header2posizione"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_header2posizione"><PropertyRef Name="Id"/></Principal>
+					<Dependent Role="ToRole_header2posizione"><PropertyRef Name="Id"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityContainer Name="Z_ESPEDIA_DIPENDENTI_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="HeaderDipendentiSet" EntityType="Z_ESPEDIA_DIPENDENTI_SRV.HeaderDipendenti" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="PosizioneDipendentiSet" EntityType="Z_ESPEDIA_DIPENDENTI_SRV.PosizioneDipendenti" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="Bapiret2Collection" EntityType="Z_ESPEDIA_DIPENDENTI_SRV.Bapiret2" sap:content-version="1"/><EntitySet Name="SHEventiSet" EntityType="Z_ESPEDIA_DIPENDENTI_SRV.SHEventi" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<AssociationSet Name="header2posizioneSet" Association="Z_ESPEDIA_DIPENDENTI_SRV.header2posizione" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="HeaderDipendentiSet" Role="FromRole_header2posizione"/><End EntitySet="PosizioneDipendentiSet" Role="ToRole_header2posizione"/></AssociationSet>
+				<FunctionImport Name="DeleteAllEvents" ReturnType="Z_ESPEDIA_DIPENDENTI_SRV.Bapiret2" EntitySet="Bapiret2Collection" m:HttpMethod="POST"><Parameter Name="Id" Type="Edm.String" Mode="In" MaxLength="32"/></FunctionImport>
+			</EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/Z_ESPEDIA_DIPENDENTI_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/Z_ESPEDIA_DIPENDENTI_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
